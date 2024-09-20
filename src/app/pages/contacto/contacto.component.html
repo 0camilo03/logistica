@@ -1,0 +1,40 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Contacto
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          Contacto Principal
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form [formGroup]="frmControllers" (ngSubmit)="contacto()">
+          <ion-item>
+            <ion-label>Nombre:</ion-label>
+            <ion-input placeholder="Nombre " formControlName="nombre"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Email:</ion-label>
+            <ion-input type="email" placeholder="Email" formControlName="correo"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Descipcion:</ion-label>
+            <ion-input placeholder="Descipcion" formControlName="descripcion"></ion-input>
+          </ion-item>
+          <ion-button type="ngSubmit">
+            Enviar
+            <ion-icon name="send"></ion-icon>
+          </ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

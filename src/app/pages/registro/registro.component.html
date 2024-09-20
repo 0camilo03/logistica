@@ -1,0 +1,48 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Registro
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          Registro
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form [formGroup]="frmControllers" (ngSubmit)="registrar()">
+          <ion-item>
+            <ion-label position="stacked">Nombres</ion-label>
+            <ion-input formControlName="nombre" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Apellidos</ion-label>
+            <ion-input formControlName="apellido" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Correo electrónico</ion-label>
+            <ion-input formControlName="correo" type="email" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Contraseña</ion-label>
+            <ion-input formControlName="contrasena" type="password" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Confirmar contraseña</ion-label>
+            <ion-input formControlName="confirmarContrasena" type="password" required></ion-input>
+          </ion-item>
+          <ion-button type="ngSubmit">
+            Registrar
+            <ion-icon name="send"></ion-icon>
+          </ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
